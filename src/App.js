@@ -8,14 +8,14 @@ export default class App extends Component {
 
   state={
     products:[
-        {id:1,code:12345,name:'Toshiba',price:50000,onSale:false},
-        {id:2,code:235,name:'Samsung',price:50000,onSale:true},
-        {id:3,code:345,name:'Nokia',price:50000,onSale:false},
-        {id:4,code:564,name:'Apple',price:50000,onSale:true},
-        {id:5,code:965,name:'Dell',price:50000,onSale:false},
-        {id:6,code:58768,name:'Lenovo',price:50000,onSale:true},
-        {id:7,code:965,name:'Dell',price:50000,onSale:false},
-        {id:8,code:58768,name:'Lenovo',price:50000,onSale:true}
+        {id:1,count:0,code:12345,name:'Toshiba',price:50000,onSale:false},
+        {id:2,count:0,code:235,name:'Samsung',price:50000,onSale:true},
+        {id:3,count:0,code:345,name:'Nokia',price:50000,onSale:false},
+        {id:4,count:0,code:564,name:'Apple',price:50000,onSale:true},
+        {id:5,count:0,code:965,name:'Dell',price:50000,onSale:false},
+        {id:6,count:0,code:58768,name:'Lenovo',price:50000,onSale:true},
+        {id:7,count:0,code:965,name:'Dell',price:50000,onSale:false},
+        {id:8,count:0,code:58768,name:'Lenovo',price:50000,onSale:true}
 
     ]
     

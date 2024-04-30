@@ -4,12 +4,13 @@ export default class Child extends Component {
     
     render() {
         //distructing props object
-        let {id,code,name,onSale,price}=this.props.productDetails;
+        let {id,count,code,name,onSale,price}=this.props.productDetails;
         return (
             <>
             <div className="col-md-3 ">
                 <div className="bg-white text-dark position-relative mb-4 p-2">
                    <h4>Child</h4>
+                   <h2>Count: {count}</h2>
                    <h2>Code: {code}</h2>
                    <h2>Name: {name}</h2>
                    <h2>Price: {price} LE</h2>
