@@ -2,7 +2,11 @@ import React, { Component } from 'react'
 import Child from '../Child/Child'
 
 export default class Parent extends Component {
-    
+  x;
+    constructor(){
+      super();
+      console.log("parent Constructor");
+    }
   render() {
     return (
  <>
@@ -14,5 +18,18 @@ export default class Parent extends Component {
  </div>
  </>
     )
+  }
+
+  componentDidMount(){
+    console.log("ComponentDidMount Parent");
+    this.x= setInterval(()=>{console.log("Hello");},200)
+  }
+  componentDidUpdate(){
+    console.log("ComponentDidUpdate Parent");
+
+  }
+  componentWillUnmount(){
+    console.log("Unmount");
+clearInterval(this.x);
   }
 }
