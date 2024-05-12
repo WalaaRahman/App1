@@ -4,12 +4,19 @@ import About from './Components/About/About.jsx'
 import Parent from './Components/Parent/Parent.jsx';
 import './App.css';
 import Products from './Components/Products/Products.js';
+import Layout from './Components/Layout/Layout.jsx';
+import { createBrowserRouter } from 'react-router-dom';
+
+
+let routers = createBrowserRouter([
+  {path:'/home',element:<Home/>}])
 
 export default class App extends Component {
 //  constructor(){
 //   // console.log("App Constructor");
 // super();
 //  }
+
   state = {
     products: [
       { id: 1, count: 0, code: 12345, name: 'Toshiba', price: 50000, onSale: false },
@@ -54,14 +61,13 @@ export default class App extends Component {
 
   }
 
-
+ 
   render() {
     return (
 
       <>
-        <Home />
-        <About />
-        <Products/>
+      <Layout/>
+     {console.log(routers)}
         {/* <Parent delete={this.deleteProduct} update={this.updateProduct} products={this.state.products} /> */}
       </>
     )
