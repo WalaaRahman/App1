@@ -5,11 +5,19 @@ import Parent from './Components/Parent/Parent.jsx';
 import './App.css';
 import Products from './Components/Products/Products.js';
 import Layout from './Components/Layout/Layout.jsx';
-import { createBrowserRouter } from 'react-router-dom';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import Notfound from './Components/Notfound/Notfound.jsx';
 
 
 let routers = createBrowserRouter([
-  {path:'/home',element:<Home/>}])
+  {path:'',element:<Layout/>,
+    children:[
+      {index:true,element:<Home/>},
+      {path:'about',element:<About/>},
+      {path:'*',element:<Notfound/>},
+      
+    ]
+  }])
 
 export default class App extends Component {
 //  constructor(){
@@ -63,14 +71,9 @@ export default class App extends Component {
 
  
   render() {
-    return (
-
-      <>
-      <Layout/>
-     {console.log(routers)}
-        {/* <Parent delete={this.deleteProduct} update={this.updateProduct} products={this.state.products} /> */}
-      </>
-    )
+    return <>
+    <RouterProvider router={routers}></RouterProvider>
+    </>
   }
 
 }
